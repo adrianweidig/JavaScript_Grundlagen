@@ -9,5 +9,11 @@
 // Wenn ein Klick auf einen Button ausgelöst wird, können Event-Handler auf dem Button selbst sowie auf allen übergeordneten Elementen reagieren.
 
 document.body.addEventListener('click', function(event) {
-    console.log('Ein Element wurde geklickt');
+    // Zugriff auf das geklickte Element über das Event-Objekt
+    console.log('Geklicktes Element:', event.target);
+
+    // Beispiel für den Zugriff auf Eigenschaften des geklickten Elements
+    console.log('ID des geklickten Elements:', event.target.id);
+    console.log('Klassennamen des geklickten Elements:', event.target.className);
+    console.log('Textinhalt des geklickten Elements:', event.target.textContent);
 });
