@@ -87,3 +87,31 @@ U
 %06_Regulaere_Ausdruecke/assertions.js,c\0\c033ee72112dcf1969f18ae1e929daabb05a6523
 _
 /06_Regulaere_Ausdruecke/regulaere_ausdruecke.js,5\b\5b168b55cbe8556ede6d0eab4fe8ff7a2bb79144
+J
+00_Uebungen/01_umsatz.html,b\4\b4b303f16dfb6baf411e5fd54802091b33e3360e
+Q
+!07_Ereignisse/event_grundlagen.js,e\3\e37d8a36aacc4e6752ee6558266b74c2a018f2a5
+O
+07_Ereignisse/event_handlers.js,4\f\4f89ccc9c8a123244f016fee292453da0086f93b
+O
+07_Ereignisse/event_listener.js,7\5\751566973f331f20647cb913b154f3c4a16949a9
+M
+07_Ereignisse/event_object.js,0\1\01ec902e799cce4c944b80e585503bf30b7cfd0a
+O
+07_Ereignisse/event_bubbling.js,b\e\be04804beee1e35038aaada53ec738ea3e4b337b
+Q
+!07_Ereignisse/event_delegation.js,8\c\8c4ff824fc303ba2b25b154025439381b6827c93
+Q
+!07_Ereignisse/event_bubbling.html,5\7\5767b9470e9176e7d78b6553e98223ba119af8f8
+T
+$07_Ereignisse/grundlagen_events.html,b\a\ba1adfc9ce5975436b5e491e4bed021a3b0a20e4
+S
+#07_Ereignisse/event_delegation.html,a\1\a19e4d3a8f625b96ecff564664a6afc3fea0d916
+S
+#07_Ereignisse/event_grundlagen.html,2\d\2dc3e3e1d54d98576691b6423e588c2ce54630e2
+Q
+!07_Ereignisse/event_handlers.html,6\2\6280dcc485a86d22a44adbbf1c241b78d44ae9ea
+Q
+!07_Ereignisse/event_listener.html,7\6\763cfc5f2917f4125d248062fb612841d99b7df7
+O
+07_Ereignisse/event_object.html,8\9\8948b09ddf22eb85baeddd772fc491bef4881428

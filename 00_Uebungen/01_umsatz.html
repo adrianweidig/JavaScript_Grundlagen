@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonusrechner</title>
+</head>
+<body>
+
+<h1>Bonusrechner</h1>
+
+<p>Umsatz: <input type="number" id="umsatzInput"></p>
+<button onclick="berechneBonus()">Bonus berechnen</button>
+
+<p id="bonusOutput"></p>
+
+<script>
+    function berechneBonus() {
+        const umsatz = parseInt(document.getElementById('umsatzInput').value);
+        let bonusProzent, bonusBetrag;
+
+        if (umsatz < 10000) {
+            bonusProzent = 0;
+            bonusBetrag = 0;
+        } else if (umsatz < 20000) {
+            bonusProzent = 5;
+            bonusBetrag = umsatz * 0.05;
+        } else if (umsatz < 50000) {
+            bonusProzent = 10;
+            bonusBetrag = umsatz * 0.1;
+        } else {
+            bonusProzent = 20;
+            bonusBetrag = umsatz * 0.2;
+        }
+
+        document.getElementById('bonusOutput').innerText = 'Umsatz: ' + umsatz + ' - Bonus: ' + bonusProzent + '% - Betrag: ' + bonusBetrag.toFixed(2) + ' €';
+    }
+</script>
+
+</body>
+</html>
