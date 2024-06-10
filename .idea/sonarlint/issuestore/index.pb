@@ -23,3 +23,11 @@ O
 old_01_Grundlagen/datentypen.js,a\7\a7a1c956fe987de48b3fe2a1db32b7982e416917
 X
 (old_02_Kontrollstrukturen/bedingungen.js,f\6\f6efa8ffdf55bab3d078b6ca6b7f3251b1fb5629
+H
+02_Collections/arrays.js,b\a\bac3bb0d6df685adf5758ccae112decc11427d05
+H
+02_Collections/listen.js,c\1\c15dda1ff695d5aae60ad99ef1305066eb3c4b82
+F
+02_Collections/maps.js,6\1\61458506cb2eccde3aaebbd48c2eb0e4e15f6c60
+F
+02_Collections/sets.js,8\a\8aeb38e6d79974427865d966222db540965d1b31
