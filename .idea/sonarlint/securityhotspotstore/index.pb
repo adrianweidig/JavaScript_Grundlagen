@@ -17,3 +17,9 @@ T
 $02_Kontrollstrukturen/bedingungen.js,2\6\262187f6a8b5e0e21c391cbbe6173f91a6b9689a
 J
 01_Grundlagen/userinput.js,7\6\761055a2ebce2e735a1d7711c1d17a185430df48
+U
+%02_Kontrollstrukturen/for_schleife.js,a\b\ab18451485366d858c2dfa3681cdbb3414c5f871
+O
+old_01_Grundlagen/datentypen.js,a\7\a7a1c956fe987de48b3fe2a1db32b7982e416917
+X
+(old_02_Kontrollstrukturen/bedingungen.js,f\6\f6efa8ffdf55bab3d078b6ca6b7f3251b1fb5629
