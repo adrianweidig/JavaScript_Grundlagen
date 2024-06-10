@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Inline HTML</title>
+</head>
+<body>
+
+<h1>JavaScript Inline HTML</h1>
+
+<p>Dies ist ein einfaches Beispiel für die Verwendung von JavaScript in einem HTML-Dokument.</p>
+
+<!-- Ein <script> -Block für JavaScript -->
+<script>
+    // Deklaration einer Variablen und Zuweisung eines Werts
+    let name = "Welt";
+
+    // Ausgabe einer Nachricht in HTML
+    document.write("<p>Hallo, " + name + "!</p>");
+
+    // Ändern des Wertes der Variablen und erneute Ausgabe
+    name = "JavaScript";
+    document.write("<p>Willkommen zurück, " + name + " Programmierer!</p>");
+
+    // Weitere Beispiele
+    let zahl = 42;
+    document.write("<p>Die Antwort auf alles ist: " + zahl + ".</p>");
+
+    let liste = ["Apfel", "Banane", "Orange"];
+    document.write("<p>Ich mag " + liste.length + " Früchte.</p>");
+
+    let istRegnerisch = true;
+    document.write("<p>Heute ist es " + (istRegnerisch ? "regnerisch" : "sonnig") + ".</p>");
+</script>
+
+</body>
+</html>

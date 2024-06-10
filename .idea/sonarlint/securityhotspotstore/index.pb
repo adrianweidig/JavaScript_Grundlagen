@@ -5,3 +5,15 @@ I
 	text.html,2\4\24bbb006a6564ab6d1f32e3604e76401b4b8dd93
 7
 text.js,a\3\a3211d25389241187fe2b2ede9fbab9e2b0c9b75
+K
+01_Grundlagen/datentypen.js,6\f\6ff17ccdb476caacc79e35b7aa30fd0b2a5cc3f2
+J
+01_Grundlagen/variablen.js,4\4\44420984b08495a02fb4df2d4268ec2e177bedac
+Y
+)01_Grundlagen/javascript_inline_html.html,e\2\e23f1c78ed4221787bc28417579042859f1005f6
+K
+01_Grundlagen/operatoren.js,8\9\89f5cf941f50088c7b144e61ba0270d22adb52b0
+T
+$02_Kontrollstrukturen/bedingungen.js,2\6\262187f6a8b5e0e21c391cbbe6173f91a6b9689a
+J
+01_Grundlagen/userinput.js,7\6\761055a2ebce2e735a1d7711c1d17a185430df48
