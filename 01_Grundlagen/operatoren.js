@@ -44,21 +44,31 @@ console.log("a nach Division:", a);
 
 // 3. Vergleichsoperatoren:
 //    - Gleich (==), Ungleich (!=), Strikte Gleichheit (===), Strikte Ungleichheit (!==), Größer (>), Größer oder gleich (>=), Kleiner (<), Kleiner oder gleich (<=)
+//    - Die Operatoren == und != vergleichen nur die Werte, während === und !== sowohl die Werte als auch die Datentypen vergleichen.
+//    - Verwende === und !==, um unerwartete Typkonvertierungen zu vermeiden, und == und != nur, wenn bewusst eine Typkonvertierung gewünscht ist.
 //    - Beispiel und Konsolenausgabe:
 
 let b = 10;
-let c = 5;
-let gleich = b == c; // false
-console.log("Gleich:", gleich);
+let c = '10';
+let d = 5;
 
-let striktGleich = b === c; // false
-console.log("Strikte Gleichheit:", striktGleich);
+let gleich = b == c; // true (vergleicht nur den Wert, Typkonvertierung findet statt)
+console.log("Gleich (==):", gleich);
 
-let größer = b > c; // true
-console.log("Größer:", größer);
+let striktGleich = b === c; // false (vergleicht Wert und Typ, keine Typkonvertierung)
+console.log("Strikte Gleichheit (===):", striktGleich);
 
-let kleinerOderGleich = b <= c; // false
-console.log("Kleiner oder gleich:", kleinerOderGleich);
+let ungleich = b != c; // false (vergleicht nur den Wert, Typkonvertierung findet statt)
+console.log("Ungleich (!=):", ungleich);
+
+let striktUngleich = b !== c; // true (vergleicht Wert und Typ, keine Typkonvertierung)
+console.log("Strikte Ungleichheit (!==):", striktUngleich);
+
+let größer = b > d; // true
+console.log("Größer (>):", größer);
+
+let kleinerOderGleich = b <= d; // false
+console.log("Kleiner oder gleich (<=):", kleinerOderGleich);
 
 // 4. Logische Operatoren:
 //    - Logisches Und (&&), Logisches Oder (||), Logisches Nicht (!)
@@ -67,13 +77,13 @@ console.log("Kleiner oder gleich:", kleinerOderGleich);
 let istWahr = true;
 let istFalsch = false;
 let logischesUnd = istWahr && istFalsch; // false
-console.log("Logisches Und:", logischesUnd);
+console.log("Logisches Und (&&):", logischesUnd);
 
 let logischesOder = istWahr || istFalsch; // true
-console.log("Logisches Oder:", logischesOder);
+console.log("Logisches Oder (||):", logischesOder);
 
 let logischesNicht = !istWahr; // false
-console.log("Logisches Nicht:", logischesNicht);
+console.log("Logisches Nicht (!):", logischesNicht);
 
 // 5. Inkrement- und Dekrementoperatoren:
 //    - Inkrement (++), Dekrement (--)
@@ -95,3 +105,28 @@ console.log("Nummer nach Dekrement:", nummer);
 let alter = 20;
 let status = (alter >= 18) ? 'Erwachsener' : 'Kind'; // 'Erwachsener'
 console.log("Status:", status);
+
+// 7. Bitweise Operatoren:
+//    - Bitweises Und (&), Bitweises Oder (|), Bitweises Nicht (~), Bitweises XOR (^), Linksverschiebung (<<), Rechtsverschiebung (>>), Unsigned Rechtsverschiebung (>>>)
+//    - Beispiel und Konsolenausgabe:
+
+let bitweiseUnd = 5 & 1; // 1 (0101 & 0001 = 0001)
+console.log("Bitweises Und (&):", bitweiseUnd);
+
+let bitweiseOder = 5 | 1; // 5 (0101 | 0001 = 0101)
+console.log("Bitweises Oder (|):", bitweiseOder);
+
+let bitweisesNicht = ~5; // -6 (~0101 = 1010, Zweierkomplement)
+console.log("Bitweises Nicht (~):", bitweisesNicht);
+
+let bitweiseXOR = 5 ^ 1; // 4 (0101 ^ 0001 = 0100)
+console.log("Bitweises XOR (^):", bitweiseXOR);
+
+let linksverschiebung = 5 << 1; // 10 (0101 << 1 = 1010)
+console.log("Linksverschiebung (<<):", linksverschiebung);
+
+let rechtsverschiebung = 5 >> 1; // 2 (0101 >> 1 = 0010)
+console.log("Rechtsverschiebung (>>):", rechtsverschiebung);
+
+let unsignedRechtsverschiebung = 5 >>> 1; // 2 (0101 >>> 1 = 0010)
+console.log("Unsigned Rechtsverschiebung (>>>):", unsignedRechtsverschiebung);

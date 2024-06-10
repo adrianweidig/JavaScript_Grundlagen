@@ -31,3 +31,18 @@ let person = { name: "Max", alter: 30 }; // Objekt
 
 console.log(zahlenArray instanceof Array); // true
 console.log(person instanceof Object); // true
+
+// 3. Typkonvertierung:
+//    - JavaScript führt automatische und explizite Typkonvertierungen durch, um Werte in verschiedene Datentypen umzuwandeln.
+
+let zahlAlsString = String(zahl); // Explizite Typkonvertierung: Zahl zu String
+console.log(typeof zahlAlsString); // typeof: zahlAlsString - Gibt den Datentyp der Variable "zahlAlsString" zurück (in diesem Fall "string").
+
+let stringAlsZahl = parseInt("42"); // Explizite Typkonvertierung: String zu Zahl
+console.log(typeof stringAlsZahl); // typeof: stringAlsZahl - Gibt den Datentyp der Variable "stringAlsZahl" zurück (in diesem Fall "number").
+
+let boolAlsString = Boolean("false"); // Explizite Typkonvertierung: String zu Boolean
+console.log(typeof boolAlsString); // typeof: boolAlsString - Gibt den Datentyp der Variable "boolAlsString" zurück (in diesem Fall "boolean").
+
+let zahlAlsBool = Boolean(0); // Automatische Typkonvertierung: Zahl zu Boolean
+console.log(typeof zahlAlsBool); // typeof: zahlAlsBool - Gibt den Datentyp der Variable "zahlAlsBool" zurück (in diesem Fall "boolean").
