@@ -81,3 +81,9 @@ S
 #05_Funktionen/scope_und_closures.js,1\d\1dcbeef2a6bb7c2379ceaf810d9b1471f889b3c3
 V
 &05_Funktionen/allgemeine_funktionen.js,9\6\961c208b58b5e5bb359ebf799cdc4c8be8e242da
+L
+ordnerstruktur_erstellen.ps1,0\4\04c087909c32056c781f9865c80f7be228316430
+U
+%06_Regulaere_Ausdruecke/assertions.js,c\0\c033ee72112dcf1969f18ae1e929daabb05a6523
+_
+/06_Regulaere_Ausdruecke/regulaere_ausdruecke.js,5\b\5b168b55cbe8556ede6d0eab4fe8ff7a2bb79144
