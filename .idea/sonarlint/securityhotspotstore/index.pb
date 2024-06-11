@@ -119,3 +119,11 @@ T
 $00_Uebungen/02_schleifen_folgen.html,e\7\e76074a9b3ee547c5b50ef4ec1e66a736dd82ec7
 M
 .github/workflows/node.js.yml,7\b\7be42621134b859b5222d6c4f6f32fcf62e7e89a
+P
+ 00_Uebungen/03_browsercheck.html,f\7\f7adda6cc52f2ca14efcfdb629bb18640e17ee6b
+I
+00_Uebungen/quadrate.html,9\2\9202a88b1a95bf396e131b0c6a05eaa31effa5c5
+L
+00_Uebungen/04_quadrate.html,c\f\cfead87f183cb858c9e8ebebf37ad468200a3367
+P
+ 00_Uebungen/05_whilequadrat.html,4\8\48588eb20a8b245a8f79fe583a759d0adb0ed589
