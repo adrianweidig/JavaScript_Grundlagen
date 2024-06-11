@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folgen</title>
+</head>
+<body>
+<h2>Erste Folge:</h2>
+<div id="firstSequence"></div>
+
+<h2>Zweite Folge:</h2>
+<div id="secondSequence"></div>
+
+<h2>Dritte Folge:</h2>
+<div id="thirdSequence"></div>
+
+<script>
+    // Erste Folge: Alle geraden Zahlen von 2 bis 20
+    let firstSequence = "";
+    // Tabelle für die erste Folge:
+    firstSequence += "<table><tr><th>Index</th><th>Wert</th></tr>";
+    // Schleife für die erste Folge:
+    for (let i = 2; i <= 20; i += 2) {
+        firstSequence += "<tr><td>" + i + "</td><td>" + i + "</td></tr>";
+    }
+    firstSequence += "</table>";
+    document.getElementById("firstSequence").innerHTML = firstSequence;
+
+    // Zweite Folge: Die Summe der vorherigen Zahlen plus die Position in der Sequenz
+    let secondSequence = "";
+    let sum = 1;
+    let increment = 1;
+    // Tabelle für die zweite Folge:
+    secondSequence += "<table><tr><th>Index</th><th>Summe</th></tr>";
+    // Schleife für die zweite Folge:
+    for (let i = 1; i < 10; i++) {
+        sum += increment;
+        increment++;
+        secondSequence += "<tr><td>" + i + "</td><td>" + sum + "</td></tr>";
+    }
+    secondSequence += "</table>";
+    document.getElementById("secondSequence").innerHTML = secondSequence;
+
+    // Dritte Folge: Fibonacci-Zahlen
+    let thirdSequence = "";
+    let a = 0;
+    let b = 1;
+    // Tabelle für die dritte Folge:
+    thirdSequence += "<table><tr><th>Index</th><th>Wert</th></tr>";
+    // Schleife für die dritte Folge:
+    for (let i = 0; i < 8; i++) {
+        let next = a + b;
+        thirdSequence += "<tr><td>" + (i + 1) + "</td><td>" + next + "</td></tr>";
+        a = b;
+        b = next;
+    }
+    thirdSequence += "</table>";
+    document.getElementById("thirdSequence").innerHTML = thirdSequence;
+</script>
+</body>
+</html>

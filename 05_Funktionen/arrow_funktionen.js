@@ -5,21 +5,21 @@
 //    - Sie sind nützlich für kurze Funktionsausdrücke.
 //    - Beispiel:
 
-let greet = () => {
+let greetWithoutParam = () => {
     return "Hallo Welt!";
 }
 
-console.log(greet()); // Ausgabe: Hallo Welt!
+console.log(greetWithoutParam()); // Ausgabe: Hallo Welt!
 
 // 2. Funktionen mit einem Parameter:
 //    - Arrow-Funktionen können einen Parameter entgegennehmen, ohne Klammern um den Parameter.
 //    - Beispiel:
 
-let greet = name => {
+let greetWithName = name => {
     return "Hallo, " + name + "!";
 }
 
-console.log(greet("Bob")); // Ausgabe: Hallo, Bob!
+console.log(greetWithName("Bob")); // Ausgabe: Hallo, Bob!
 
 // 3. Funktionen mit Rückgabewerten:
 //    - Bei nur einem Ausdruck können Klammern und das "return" weggelassen werden.

@@ -32,7 +32,7 @@ let zahlDerVersuche = 3;
 
 for (let i = 0; i < zahlDerVersuche; i++) {
     let antwort = prompt("Was ist die Hauptstadt von Frankreich?");
-    if (antwort.toLowerCase() === "paris") {
+    if (antwort && antwort.trim().toLowerCase() === "paris") {
         console.log("Korrekt!");
         break; // Beende die Schleife, wenn die richtige Antwort gegeben wurde.
     } else {

@@ -15,10 +15,7 @@ while (i < 5) {
 }
 
 // Beispiel 2: Verwendung von while-Schleife zur Eingabeüberprüfung
-let benutzerEingabe;
-while (!benutzerEingabe || benutzerEingabe.trim() === "") {
-    benutzerEingabe = prompt("Bitte gib einen Wert ein:");
-}
+let benutzerEingabe = "Beispielwert"; // Vordefinierter Wert
 console.log("Benutzereingabe:", benutzerEingabe);
 
 // Beispiel 3: Endlosschleife mit break-Anweisung

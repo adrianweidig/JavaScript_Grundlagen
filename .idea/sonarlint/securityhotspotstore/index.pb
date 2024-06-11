@@ -97,3 +97,23 @@ H
 01_Grundlagen/strings.js,c\a\cabcfb93a7c38472de1bb1c182a73ffa5ae647b7
 H
 01_Grundlagen/integer.js,7\6\767328467d48c7299e856634400101685b5fa5ad
+I
+08_Promises/grundlagen.js,2\1\216fe6df9059229213506323bfa4518abe1bbf65
+I
+08_Promises/verwendung.js,c\5\c5bf3562eb50f76445c9b4b37f545c4faa182269
+O
+08_Promises/promisifizierung.js,b\4\b45dff55b4752ab8519996a1a497f18f8a4bfc9d
+J
+08_Promises/async_await.js,6\c\6cd16545dab3a9af855cbb3935ff4c119f0627ca
+M
+08_Promises/error_handling.js,9\1\9132b5031ebdbbc7255fdc231d48a7bbb956910f
+Q
+!08_Promises/parallel_execution.js,4\4\447453d3de81ec4ebda178d870ab9b435f503cf5
+L
+08_Promises/anti-patterns.js,e\9\e9632efe9dbd85803bee2f395641e027de53b364
+N
+08_Promises/advanced_topics.js,8\c\8c9698764e102a2668f4b3d5c0919e829024cc78
+L
+01_Grundlagen/userinput.html,9\e\9ec98441564097dec641221d4385da196b336f1f
+T
+$00_Uebungen/02_schleifen_folgen.html,e\7\e76074a9b3ee547c5b50ef4ec1e66a736dd82ec7

@@ -63,13 +63,16 @@ var c = 30; // Deklariert eine Variable "c" und weist ihr den Wert 30 zu. (Nicht
 
 // Vergleich zwischen let und var bezüglich des Scopes:
 console.log("Vergleich zwischen let und var:");
+// Kommentar: Der Fehler liegt darin, dass "vorherLet" und "nachherLet" außerhalb ihres Gültigkeitsbereichs verwendet werden.
+// Dadurch werden ReferenceError verursacht.
+// Der Fehler zeigt den Unterschied im Scoping-Verhalten zwischen "let" und "var".
 console.log("Vorher - let: ", vorherLet); // Fehler: ReferenceError: Cannot access 'vorherLet' before initialization
 console.log("Vorher - var: ", vorherVar); // undefined
 
 var vorherVar = "Ich bin var";
 let vorherLet = "Ich bin let";
 
-console.log("Nachher - let: ", nachherLet); // "Ich bin let"
+console.log("Nachher - let: ", nachherLet); // Fehler: ReferenceError: nachherLet is not defined
 console.log("Nachher - var: ", nachherVar); // undefined
 
 {
