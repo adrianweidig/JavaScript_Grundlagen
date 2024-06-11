@@ -8,11 +8,11 @@
 function Zaehler() {
     let anzahl = 0;
 
-    this.erhoehen = function() {
+    this.erhoehen = function () {
         anzahl++;
     }
 
-    this.anzeigen = function() {
+    this.anzeigen = function () {
         return anzahl;
     }
 }

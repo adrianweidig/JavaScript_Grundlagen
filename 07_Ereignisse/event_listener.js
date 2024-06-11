@@ -9,6 +9,6 @@
 // Ein Event-Listener kann darauf warten, dass ein Mausklick auf einen Button erfolgt, und dann eine Funktion aufrufen, um den Klick zu verarbeiten.
 
 const button = document.getElementById('myButton');
-button.addEventListener('click', function(event) {
+button.addEventListener('click', function (event) {
     console.log('Button wurde geklickt');
 });

@@ -9,7 +9,7 @@
 // Ein Event-Objekt für einen Mausklick kann Informationen über die Position des Klicks und das betroffene Element enthalten.
 
 const button = document.getElementById('myButton');
-button.addEventListener('click', function(event) {
+button.addEventListener('click', function (event) {
     console.log(event.type); // Gibt den Typ des Events aus (z. B. "click")
     console.log(event.target); // Gibt das Element zurück, auf das geklickt wurde
 });

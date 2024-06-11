@@ -9,7 +9,7 @@
 // Anstatt jedem einzelnen Listenelement einen Event-Handler zuzuweisen, kann ein Event-Handler auf das übergeordnete Listenelement angewendet werden, um Klicks auf alle Listenelemente zu verarbeiten.
 
 const list = document.getElementById('myList');
-list.addEventListener('click', function(event) {
+list.addEventListener('click', function (event) {
     if (event.target.tagName === 'LI') {
         console.log('Listenelement wurde geklickt');
     }

@@ -9,11 +9,11 @@
 // Ein Event-Handler kann verwendet werden, um auf einen Mausklick auf einen Button zu reagieren und eine bestimmte Aktion auszuführen.
 
 // Event-Handler für einen Button-Klick
-document.getElementById('myButton').onclick = function() {
+document.getElementById('myButton').onclick = function () {
     console.log('Button wurde geklickt');
 };
 
 // Event-Handler für Mausbewegungen
-document.addEventListener('mousemove', function(event) {
+document.addEventListener('mousemove', function (event) {
     console.log('Mausposition: (' + event.clientX + ', ' + event.clientY + ')');
 });

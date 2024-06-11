@@ -59,6 +59,6 @@ for (let i = 0; i < namen.length; i++) {
     console.log("Name:", namen[i]);
 }
 
-namen.forEach(function(name) {
+namen.forEach(function (name) {
     console.log("Name:", name);
 });

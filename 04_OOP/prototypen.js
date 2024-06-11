@@ -9,7 +9,7 @@ function Auto(marke) {
     this.marke = marke;
 }
 
-Auto.prototype.starten = function() {
+Auto.prototype.starten = function () {
     return `Das ${this.marke} Auto wurde gestartet.`;
 }
 

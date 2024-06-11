@@ -1,10 +1,6 @@
 
 I
 JavaScript_Grundlagen.iml,e\0\e00484d876d1bc21bce6a128b6e1ba64b48cdb1a
-9
-	text.html,2\4\24bbb006a6564ab6d1f32e3604e76401b4b8dd93
-7
-text.js,a\3\a3211d25389241187fe2b2ede9fbab9e2b0c9b75
 K
 01_Grundlagen/datentypen.js,6\f\6ff17ccdb476caacc79e35b7aa30fd0b2a5cc3f2
 J
@@ -13,16 +9,8 @@ Y
 )01_Grundlagen/javascript_inline_html.html,e\2\e23f1c78ed4221787bc28417579042859f1005f6
 K
 01_Grundlagen/operatoren.js,8\9\89f5cf941f50088c7b144e61ba0270d22adb52b0
-T
-$02_Kontrollstrukturen/bedingungen.js,2\6\262187f6a8b5e0e21c391cbbe6173f91a6b9689a
 J
 01_Grundlagen/userinput.js,7\6\761055a2ebce2e735a1d7711c1d17a185430df48
-U
-%02_Kontrollstrukturen/for_schleife.js,a\b\ab18451485366d858c2dfa3681cdbb3414c5f871
-O
-old_01_Grundlagen/datentypen.js,a\7\a7a1c956fe987de48b3fe2a1db32b7982e416917
-X
-(old_02_Kontrollstrukturen/bedingungen.js,f\6\f6efa8ffdf55bab3d078b6ca6b7f3251b1fb5629
 H
 02_Collections/arrays.js,b\a\bac3bb0d6df685adf5758ccae112decc11427d05
 H
@@ -61,30 +49,16 @@ T
 $05_Funktionen/callback_funktionen.js,a\2\a253173bc3e47afb943379483072452d0fee3a17
 I
 05_Funktionen/currying.js,d\a\daff5b1a207a0d43ea85bd6934cb1fc8956b5bcb
-[
-+05_Funktionen/funktionale_programmierung.js,3\0\30424f95b8e2ba0f9e4cb2a9899cb27d9621fa2a
 W
 '05_Funktionen/funktionen_als_objekte.js,a\5\a5d11796cd9b7af7fa89d01a698c28b1dfeaee62
-T
-$05_Funktionen/funktionsausdruecke.js,3\f\3f0db81ded63d422843dd2f0f99bce79e4931e11
-W
-'05_Funktionen/funktionsdeklarationen.js,2\c\2cbb8c1cdf4b29e7f557708a27397c46719c7a13
 S
 #05_Funktionen/hoehere_funktionen.js,a\c\acd7a4365e6221e19914dd9e21c756b1183621e7
-X
-(05_Funktionen/parameter_und_argumente.js,c\a\cae9818f42518b062d7c7b2734d9ca9eb3899154
 J
 05_Funktionen/rekursion.js,6\8\68b8b5eba863c4bc0d08e6929fc65be010567196
-O
-05_Funktionen/rueckgabewerte.js,8\f\8fe67c2288055fd8ef2e5b0e4e6607c816a1f192
 S
 #05_Funktionen/scope_und_closures.js,1\d\1dcbeef2a6bb7c2379ceaf810d9b1471f889b3c3
 V
 &05_Funktionen/allgemeine_funktionen.js,9\6\961c208b58b5e5bb359ebf799cdc4c8be8e242da
-L
-ordnerstruktur_erstellen.ps1,0\4\04c087909c32056c781f9865c80f7be228316430
-U
-%06_Regulaere_Ausdruecke/assertions.js,c\0\c033ee72112dcf1969f18ae1e929daabb05a6523
 _
 /06_Regulaere_Ausdruecke/regulaere_ausdruecke.js,5\b\5b168b55cbe8556ede6d0eab4fe8ff7a2bb79144
 J
@@ -103,8 +77,6 @@ Q
 !07_Ereignisse/event_delegation.js,8\c\8c4ff824fc303ba2b25b154025439381b6827c93
 Q
 !07_Ereignisse/event_bubbling.html,5\7\5767b9470e9176e7d78b6553e98223ba119af8f8
-T
-$07_Ereignisse/grundlagen_events.html,b\a\ba1adfc9ce5975436b5e491e4bed021a3b0a20e4
 S
 #07_Ereignisse/event_delegation.html,a\1\a19e4d3a8f625b96ecff564664a6afc3fea0d916
 S
@@ -119,3 +91,9 @@ O
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 7
 LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
+P
+ 03_Kontrollstrukturen/bloecke.js,d\f\df677465ed45f122d9ff35a4ae57d8836dd782e6
+H
+01_Grundlagen/strings.js,c\a\cabcfb93a7c38472de1bb1c182a73ffa5ae647b7
+H
+01_Grundlagen/integer.js,7\6\767328467d48c7299e856634400101685b5fa5ad

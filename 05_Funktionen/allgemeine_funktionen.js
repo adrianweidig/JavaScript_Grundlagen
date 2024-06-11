@@ -33,3 +33,20 @@ function square(x) {
 
 let result = square(5);
 console.log("Das Quadrat von 5 ist:", result); // Ausgabe: Das Quadrat von 5 ist: 25
+
+
+// 4. Funktionen mit variabler Parameterliste:
+//    - Funktionen können eine variable Anzahl von Parametern entgegennehmen, indem sie den Rest-Operator (...) verwenden.
+//    - Dies ist nützlich, wenn die Anzahl der Argumente nicht im Voraus bekannt ist.
+//    - Beispiel:
+
+// Verwendungszweck: Funktionen mit variabler Parameterliste sind nützlich, wenn man mit einer unbekannten Anzahl
+// von Argumenten arbeiten muss, wie z.B. bei mathematischen Operationen oder beim Zusammenfügen von Texten.
+
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log("Die Summe ist:", sum(1, 2, 3)); // Ausgabe: Die Summe ist: 6
+console.log("Die Summe ist:", sum(5, 10, 15, 20)); // Ausgabe: Die Summe ist: 50
+

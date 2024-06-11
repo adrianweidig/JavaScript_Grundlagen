@@ -27,7 +27,7 @@ console.log(typeof nichtDefiniert); // typeof: nichtDefiniert - Gibt den Datenty
 console.log(typeof symbol); // typeof: symbol - Gibt den Datentyp der Variable "symbol" zurück (in diesem Fall "symbol").
 
 let zahlenArray = [1, 2, 3, 4, 5]; // Array
-let person = { name: "Max", alter: 30 }; // Objekt
+let person = {name: "Max", alter: 30}; // Objekt
 
 console.log(zahlenArray instanceof Array); // true
 console.log(person instanceof Object); // true

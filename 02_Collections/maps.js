@@ -51,6 +51,6 @@ for (let [schluessel, wert] of benutzerMap) {
     console.log("Schlüssel:", schluessel, "Wert:", wert);
 }
 
-benutzerMap.forEach(function(wert, schluessel) {
+benutzerMap.forEach(function (wert, schluessel) {
     console.log("Schlüssel:", schluessel, "Wert:", wert);
 });

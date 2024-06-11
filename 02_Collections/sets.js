@@ -44,7 +44,7 @@ for (let farbe of farbenSet) {
     console.log("Farbe:", farbe);
 }
 
-farbenSet.forEach(function(farbe) {
+farbenSet.forEach(function (farbe) {
     console.log("Farbe:", farbe);
 });
 

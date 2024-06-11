@@ -5,7 +5,7 @@
 //    - Sie können direkt als Argumente an andere Funktionen übergeben werden.
 //    - Beispiel:
 
-let greeting = function(name) {
+let greeting = function (name) {
     return "Hallo, " + name + "!";
 }
 

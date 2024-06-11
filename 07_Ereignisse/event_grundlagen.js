@@ -9,6 +9,6 @@
 // Ein Mausklick auf einen Button löst ein Java Event aus, das von einem Event-Handler verarbeitet werden kann.
 
 const button = document.getElementById('myButton');
-button.addEventListener('click', function(event) {
+button.addEventListener('click', function (event) {
     console.log('Button wurde geklickt');
 });

@@ -6,12 +6,12 @@
 //    - Beispiele:
 
 // Modul-Pattern
-let Modul = (function() {
+let Modul = (function () {
     let privatVariable = "Ich bin privat";
 
     return {
         oeffentlicheVariable: "Ich bin öffentlich",
-        oeffentlicheMethode: function() {
+        oeffentlicheMethode: function () {
             console.log(privatVariable);
         }
     };
@@ -22,7 +22,7 @@ Modul.oeffentlicheMethode(); // Ausgabe: "Ich bin privat"
 
 // Fabrik-Pattern
 function AutoFabrik() {
-    this.createAuto = function(typ) {
+    this.createAuto = function (typ) {
         let auto;
 
         if (typ === "sport") {
@@ -32,7 +32,7 @@ function AutoFabrik() {
         }
 
         auto.typ = typ;
-        auto.fahren = function() {
+        auto.fahren = function () {
             console.log(`Das ${this.typ} Auto fährt.`);
         };
 
@@ -59,14 +59,14 @@ auto2.fahren(); // Ausgabe: "Das familie Auto fährt."
 function EventEmitter() {
     this.events = {};
 
-    this.on = function(event, listener) {
+    this.on = function (event, listener) {
         if (typeof this.events[event] !== 'object') {
             this.events[event] = [];
         }
         this.events[event].push(listener);
     };
 
-    this.emit = function(event, ...args) {
+    this.emit = function (event, ...args) {
         if (typeof this.events[event] === 'object') {
             this.events[event].forEach(listener => listener.apply(this, args));
         }
@@ -78,7 +78,7 @@ emitter.on('greet', message => console.log(message));
 emitter.emit('greet', 'Hallo, Welt!'); // Ausgabe: "Hallo, Welt!"
 
 // Singleton-Pattern
-const Singleton = (function() {
+const Singleton = (function () {
     let instance;
 
     function createInstance() {
@@ -87,7 +87,7 @@ const Singleton = (function() {
     }
 
     return {
-        getInstance: function() {
+        getInstance: function () {
             if (!instance) {
                 instance = createInstance();
             }

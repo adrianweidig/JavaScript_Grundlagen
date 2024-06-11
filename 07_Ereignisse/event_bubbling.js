@@ -8,7 +8,7 @@
 // Beispiel:
 // Wenn ein Klick auf einen Button ausgelöst wird, können Event-Handler auf dem Button selbst sowie auf allen übergeordneten Elementen reagieren.
 
-document.body.addEventListener('click', function(event) {
+document.body.addEventListener('click', function (event) {
     // Zugriff auf das geklickte Element über das Event-Objekt
     console.log('Geklicktes Element:', event.target);
 
