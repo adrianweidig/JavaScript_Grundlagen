@@ -127,3 +127,9 @@ L
 00_Uebungen/04_quadrate.html,c\f\cfead87f183cb858c9e8ebebf37ad468200a3367
 P
  00_Uebungen/05_whilequadrat.html,4\8\48588eb20a8b245a8f79fe583a759d0adb0ed589
+L
+00_Uebungen/06_addition.html,6\a\6a3f0b2671a2e48b620cf7e257e27ceb1311d80d
+L
+00_Uebungen/07_absaetze.html,a\4\a4bf3a348c23a92a51f5660a4c47dc2d10c978f2
+\
+,00_Uebungen/08_lokale_globale_variablen.html,0\c\0cf45ce5052720d3129f982893eb05d2df44d0fd
