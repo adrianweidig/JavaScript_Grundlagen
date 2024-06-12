@@ -111,18 +111,12 @@ Q
 !08_Promises/parallel_execution.js,4\4\447453d3de81ec4ebda178d870ab9b435f503cf5
 L
 08_Promises/anti-patterns.js,e\9\e9632efe9dbd85803bee2f395641e027de53b364
-N
-08_Promises/advanced_topics.js,8\c\8c9698764e102a2668f4b3d5c0919e829024cc78
 L
 01_Grundlagen/userinput.html,9\e\9ec98441564097dec641221d4385da196b336f1f
 T
 $00_Uebungen/02_schleifen_folgen.html,e\7\e76074a9b3ee547c5b50ef4ec1e66a736dd82ec7
-M
-.github/workflows/node.js.yml,7\b\7be42621134b859b5222d6c4f6f32fcf62e7e89a
 P
  00_Uebungen/03_browsercheck.html,f\7\f7adda6cc52f2ca14efcfdb629bb18640e17ee6b
-I
-00_Uebungen/quadrate.html,9\2\9202a88b1a95bf396e131b0c6a05eaa31effa5c5
 L
 00_Uebungen/04_quadrate.html,c\f\cfead87f183cb858c9e8ebebf37ad468200a3367
 P
@@ -133,3 +127,5 @@ L
 00_Uebungen/07_absaetze.html,a\4\a4bf3a348c23a92a51f5660a4c47dc2d10c978f2
 \
 ,00_Uebungen/08_lokale_globale_variablen.html,0\c\0cf45ce5052720d3129f982893eb05d2df44d0fd
+Q
+!node_modules/node.js/package.json,1\a\1addeb708f144d0aaa48d1c57e16ee94effcb1e6
