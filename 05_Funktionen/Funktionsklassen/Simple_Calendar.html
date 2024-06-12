@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einfacher Kalender</title>
+    <style>
+        /* Einfaches Styling für die Tabelle */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            text-align: center;
+            padding: 5px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // Beispiel-Datum: Juni 2023 (Monat ist 0-basiert)
+    const year = 2023;
+    const month = 4; // Juni
+
+    // Erstellt die erste Zeile mit Wochentagsnamen
+    let tableHTML = '<table><tr>';
+    tableHTML += '<th>Mo</th>';
+    tableHTML += '<th>Di</th>';
+    tableHTML += '<th>Mi</th>';
+    tableHTML += '<th>Do</th>';
+    tableHTML += '<th>Fr</th>';
+    tableHTML += '<th>Sa</th>';
+    tableHTML += '<th>So</th>';
+    tableHTML += '</tr>';
+
+    // Berechnet die Anzahl der Tage im angegebenen Monat
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    // Berechnet den Wochentag des ersten Tages im Monat
+    const firstDay = (new Date(year, month, 1).getDay() + 6) % 7; // Wochentag (0 = Montag, 6 = Sonntag)
+
+    let day = 1; // Startet mit dem ersten Tag des Monats
+    for (let i = 0; day <= daysInMonth; i++) { // Äußere Schleife für die Zeilen (Wochen)
+        tableHTML += '<tr>'; // Neue Zeile für die Woche
+        for (let j = 0; j < 7; j++) { // Innere Schleife für die Spalten (Wochentage)
+            if (i === 0 && j < firstDay) {
+                // Fügt leere Zellen vor dem ersten Tag des Monats hinzu
+                tableHTML += '<td></td>';
+            } else if (day > daysInMonth) {
+                // Fügt leere Zellen nach dem letzten Tag des Monats hinzu
+                tableHTML += '<td></td>';
+            } else {
+                // Fügt die Tage des Monats hinzu
+                tableHTML += `<td>${day}</td>`;
+                day++; // Erhöht den Tag um 1
+            }
+        }
+        tableHTML += '</tr>'; // Schließt die Zeile für die Woche
+    }
+
+    tableHTML += '</table>'; // Schließt die Tabelle
+    document.write(tableHTML); // Schreibt die generierte Tabelle direkt in den Body des Dokuments
+</script>
+
+</body>
+</html>
