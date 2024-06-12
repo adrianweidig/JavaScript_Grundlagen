@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bankkonto</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h2>Bankkonto</h2>
+<div id="konten"></div>
+
+<button onclick="neuesKonto()">Neues Konto erstellen</button>
+
+<script>
+    // Klasse für Bankkonto
+    class Konto {
+        constructor(name) {
+            this.name = name; // Initialisiert den Namen des Kontos
+            this.stand = 0; // Setzt den Anfangskontostand auf 0
+        }
+
+        // Methode für Einzahlung
+        einzahlen(betrag) {
+            this.stand += betrag; // Erhöht den Kontostand um den angegebenen Betrag
+            this.anzeigen();
+        }
+
+        // Methode für Auszahlung
+        auszahlen(betrag) {
+            if (betrag <= this.stand) { // Überprüft, ob genügend Geld auf dem Konto vorhanden ist
+                this.stand -= betrag; // Verringert den Kontostand um den angegebenen Betrag
+            } else {
+                alert("Nicht genügend Guthaben auf dem Konto.");
+            }
+            this.anzeigen();
+        }
+
+        // Methode zur Anzeige des Kontostands
+        anzeigen() {
+            const kontoDiv = document.getElementById(this.name);
+            kontoDiv.innerHTML = `<h3>Konto: ${this.name}</h3><p>Kontostand: ${this.stand.toFixed(2)} €</p>`;
+            kontoDiv.innerHTML += `<button onclick="einzahlen('${this.name}')">Einzahlen</button>`;
+            kontoDiv.innerHTML += `<button onclick="auszahlen('${this.name}')">Auszahlen</button>`;
+        }
+    }
+
+    // Array für die Konten
+    const konten = [];
+
+    // Funktion zur Erstellung eines neuen Kontos
+    function neuesKonto() {
+        const name = prompt("Geben Sie den Namen des neuen Kontos ein:");
+        if (name) {
+            const konto = new Konto(name);
+            konten.push(konto);
+            anzeigenKonten();
+        }
+    }
+
+    // Funktion zur Anzeige aller Konten
+    function anzeigenKonten() {
+        const kontenDiv = document.getElementById("konten");
+        kontenDiv.innerHTML = "";
+
+        konten.forEach(konto => {
+            const kontoDiv = document.createElement("div");
+            kontoDiv.id = konto.name;
+            kontenDiv.appendChild(kontoDiv);
+            konto.anzeigen(); // Anzeige des neuen Kontos
+        });
+    }
+
+    // Funktion für Geld einzahlen
+    function einzahlen(kontoName) {
+        const konto = konten.find(k => k.name === kontoName);
+        const betrag = parseFloat(prompt(`Geben Sie den Betrag ein, den Sie auf das Konto "${kontoName}" einzahlen möchten:`));
+        if (!isNaN(betrag) && betrag > 0) {
+            konto.einzahlen(betrag);
+        } else {
+            alert("Ungültiger Betrag. Bitte geben Sie eine positive Zahl ein.");
+        }
+    }
+
+    // Funktion für Geld auszahlen
+    function auszahlen(kontoName) {
+        const konto = konten.find(k => k.name === kontoName);
+        const betrag = parseFloat(prompt(`Geben Sie den Betrag ein, den Sie vom Konto "${kontoName}" abheben möchten:`));
+        if (!isNaN(betrag) && betrag > 0) {
+            konto.auszahlen(betrag);
+        } else {
+            alert("Ungültiger Betrag. Bitte geben Sie eine positive Zahl ein.");
+        }
+    }
+
+    // Anfangsanzeige
+    anzeigenKonten();
+</script>
+</body>
+</html>

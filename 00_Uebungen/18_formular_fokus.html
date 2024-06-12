@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularüberprüfung</title>
+    <style>
+        /* Stil für den Fehlerbereich */
+        #fehler {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Formularüberprüfung</h1>
+<form id="meinFormular" onsubmit="return ueberpruefen()">
+    <!-- Eingabefelder für Name, Vorname, Ort und Postleitzahl -->
+    <label for="name">Name*:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="vorname">Vorname*:</label>
+    <input type="text" id="vorname" name="vorname" required><br>
+
+    <label for="ort">Ort*:</label>
+    <input type="text" id="ort" name="ort" required><br>
+
+    <label for="plz">Postleitzahl*:</label>
+    <input type="text" id="plz" name="plz" required pattern="[0-9]{5}"><br> <!-- Postleitzahl muss aus 5 Zahlen bestehen -->
+
+    <!-- Eingabefelder für Größe, Gewicht und Alter -->
+    <label for="groesse">Größe (in cm):</label>
+    <input type="number" id="groesse" name="groesse" min="0"><br> <!-- Größe kann 0 oder größer sein -->
+
+    <label for="gewicht">Gewicht (in kg):</label>
+    <input type="number" id="gewicht" name="gewicht" min="0"><br> <!-- Gewicht kann 0 oder größer sein -->
+
+    <label for="alter">Alter:</label>
+    <input type="number" id="alter" name="alter" min="0"><br> <!-- Alter kann 0 oder größer sein -->
+
+    <!-- Fehlerbereich -->
+    <div id="fehler"></div>
+
+    <!-- Submit-Button -->
+    <input type="submit" value="Formular absenden">
+</form>
+
+<script>
+    // Funktion zur Überprüfung des Formulars
+    function ueberpruefen() {
+        // Fehlermeldung zurücksetzen
+        document.getElementById('fehler').innerHTML = '';
+
+        // Pflichtfelder überprüfen
+        const name = document.getElementById('name').value;
+        const vorname = document.getElementById('vorname').value;
+        const ort = document.getElementById('ort').value;
+        const plz = document.getElementById('plz').value;
+
+        if (!name || !vorname || !ort || !plz) {
+            // Fehlermeldung anzeigen, wenn Pflichtfelder nicht ausgefüllt sind
+            document.getElementById('fehler').innerHTML = 'Bitte füllen Sie alle Pflichtfelder aus.';
+            return false; // Formular wird nicht abgesendet
+        }
+
+        // Zusätzliche Überprüfungen für Größe, Gewicht und Alter
+        const groesse = document.getElementById('groesse').value;
+        const gewicht = document.getElementById('gewicht').value;
+        const alter = document.getElementById('alter').value;
+
+        if (groesse < 0 || groesse > 300 || gewicht < 0 || alter < 0) {
+            // Fehlermeldung anzeigen, wenn sinnvolle Werte nicht eingegeben wurden
+            document.getElementById('fehler').innerHTML = 'Bitte geben Sie gültige Werte für Größe, Gewicht und Alter ein.';
+            return false; // Formular wird nicht abgesendet
+        }
+
+        // Rückgabe true, wenn alle Überprüfungen erfolgreich waren
+        return true;
+    }
+</script>
+</body>
+</html>

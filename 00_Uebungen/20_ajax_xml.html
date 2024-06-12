@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>XML mit Ajax laden und verarbeiten</title>
+</head>
+<body>
+<h1>Webseiten</h1>
+<ul id="webseitenListe"></ul>
+
+<script>
+    // XMLHttpRequest-Objekt erstellen
+    let xhttp = new XMLHttpRequest();
+
+    // Event-Handler für den Abschluss des AJAX-Anforderungsvorgangs
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            // XML-Daten verarbeiten
+            let xmlDoc = this.responseXML;
+
+            // Elemente 'seite' auswählen
+            let seiten = xmlDoc.getElementsByTagName("seite");
+
+            // Ausgabe von Titel und URL jeder Seite
+            let webseitenListe = document.getElementById("webseitenListe");
+            for (const element of seiten) {
+                let titel = element.getElementsByTagName("titel")[0].childNodes[0].nodeValue;
+                let url = element.getElementsByTagName("url")[0].childNodes[0].nodeValue;
+
+                let listItem = document.createElement("li");
+                listItem.innerHTML = "<strong>" + titel + "</strong>: " + url;
+                webseitenListe.appendChild(listItem);
+            }
+        }
+    };
+
+    // AJAX-Anforderung senden
+    xhttp.open("GET", "20_ajax_xml.xml", true); // Hier die URL zur XML-Datei einfügen
+    xhttp.send();
+</script>
+</body>
+</html>

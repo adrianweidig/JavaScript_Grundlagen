@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bildergalerie</title>
+    <style>
+        /* CSS-Stil für die verkleinerten Bilder */
+        .thumbnail {
+            width: 100px;
+            height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+            cursor: pointer; /* Zeiger wird zu Handzeiger beim Überfahren des Bildes */
+        }
+
+        /* CSS-Stil für die großen Bilder */
+        #grossesBild {
+            width: 500px; /* Festgelegte Breite für große Bilder */
+            height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+            display: none; /* Versteckt das Bild standardmäßig */
+        }
+    </style>
+    <script type="text/javascript">
+        // Funktion zur Anzeige des großen Bildes
+        function zeigeGrossesBild(bildURL) {
+            // Holt das img-Element, in dem das große Bild angezeigt werden soll, über die ID
+            const grossesBildElement = document.getElementById('grossesBild');
+            // Setzt die Bildquelle des img-Elements auf das angeklickte Bild
+            grossesBildElement.src = bildURL;
+            // Zeigt das große Bild an, indem das display-Attribut auf 'block' gesetzt wird
+            grossesBildElement.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+<h1>Bildergalerie</h1>
+<!-- Tabelle mit verkleinerten Bildern -->
+<table>
+    <thead>
+    <tr>
+        <th>Bild 1</th>
+        <th>Bild 2</th>
+        <th>Bild 3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <!-- Miniaturbilder mit onclick-Ereignis, um das große Bild anzuzeigen -->
+        <td><img class="thumbnail" src="https://images.computerwoche.de/bdb/3340394/738x415_f5f5f5.jpg" alt="Bild 1" onclick="zeigeGrossesBild('https://images.computerwoche.de/bdb/3340394/738x415_f5f5f5.jpg')"></td>
+        <td><img class="thumbnail" src="https://i.wfcdn.de/teaser/videos/10047.jpg" alt="Bild 2" onclick="zeigeGrossesBild('https://i.wfcdn.de/teaser/videos/10047.jpg')"></td>
+        <td><img class="thumbnail" src="https://i.pinimg.com/originals/be/a8/cd/bea8cde19394242fb40758a921ec0bfb.jpg" alt="Bild 3" onclick="zeigeGrossesBild('https://i.pinimg.com/originals/be/a8/cd/bea8cde19394242fb40758a921ec0bfb.jpg')"></td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Großes Bild, das nach einem Klick angezeigt wird -->
+<img id="grossesBild" src="" alt="Großes Bild">
+</body>
+</html>

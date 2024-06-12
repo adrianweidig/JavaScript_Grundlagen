@@ -1,0 +1,26 @@
++-------------+---------------------------------------------+
+| Eventhandler| Benutzeraktion                                |
++-------------+---------------------------------------------+
+| onabort     | Ausgelöst, wenn das Laden eines Bildes oder  |
+|             | einer anderen Mediendatei abgebrochen wird.   |
++-------------+---------------------------------------------+
+| onchange    | Ausgelöst, wenn der Wert eines Formularelements|
+|             | geändert wird und dieses Element den Fokus    |
+|             | verliert.                                     |
++-------------+---------------------------------------------+
+| onclick     | Ausgelöst, wenn der Benutzer auf ein Element  |
+|             | klickt, z. B. auf einen Button oder ein Bild. |
++-------------+---------------------------------------------+
+| onmouseout  | Ausgelöst, wenn der Mauszeiger das Element    |
+|             | verlässt, d. h. wenn er von dem Element       |
+|             | weggeht.                                      |
++-------------+---------------------------------------------+
+| onfocus     | Ausgelöst, wenn ein Element den Fokus erhält, |
+|             | d. h. wenn es ausgewählt oder aktiviert wird.|
++-------------+---------------------------------------------+
+| onload      | Ausgelöst, wenn eine Webseite oder ein Bild   |
+|             | vollständig geladen ist.                      |
++-------------+---------------------------------------------+
+| onunload    | Ausgelöst, wenn der Benutzer die Seite verlässt|
+|             | oder die Seite neu lädt.                      |
++-------------+---------------------------------------------+

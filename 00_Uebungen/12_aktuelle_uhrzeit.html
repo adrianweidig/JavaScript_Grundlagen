@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Uhrzeit in der Titelleiste</title>
+    <script type="text/javascript">
+        // Funktion zur Anzeige der aktuellen Uhrzeit in der Titelleiste
+        function zeigeZeit() {
+            // Erstellt ein neues Date-Objekt, das die aktuelle Zeit enthält
+            var jetzt = new Date();
+
+            // Holt Stunden, Minuten und Sekunden aus dem Date-Objekt
+            var stunden = jetzt.getHours();
+            var minuten = jetzt.getMinutes();
+            var sekunden = jetzt.getSeconds();
+
+            // Fügt führende Nullen hinzu, wenn Stunden, Minuten oder Sekunden einstellig sind
+            stunden = (stunden < 10) ? '0' + stunden : stunden;
+            minuten = (minuten < 10) ? '0' + minuten : minuten;
+            sekunden = (sekunden < 10) ? '0' + sekunden : sekunden;
+
+            // Setzt die Uhrzeit in das Titelfeld des Dokuments
+            document.title = stunden + ':' + minuten + ':' + sekunden;
+
+            // Ruft die Funktion zeigeZeit alle Sekunde erneut auf
+            setTimeout(zeigeZeit, 1000);
+        }
+
+        // Startet die Funktion zeigeZeit, um die Uhrzeit zu aktualisieren
+        zeigeZeit();
+    </script>
+</head>
+<body>
+</body>
+</html>

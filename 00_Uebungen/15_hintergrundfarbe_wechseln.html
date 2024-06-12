@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Webseite</title>
+    <script type="text/javascript">
+        // Funktion zum Überprüfen und Anzeigen der vorherigen URL
+        function checkReferrer() {
+            if (document.referrer) {
+                // Zeige die vorherige URL an, wenn document.referrer vorhanden ist
+                alert("Sie wurden von " + document.referrer + " auf diese Seite weitergeleitet.");
+            } else {
+                // Zeige die aktuelle URL an, wenn document.referrer nicht vorhanden ist
+                alert("Die aktuelle URL lautet: " + window.location.href);
+            }
+        }
+
+        // Funktion zum Ändern der Hintergrundfarbe und Anzeigen der vorherigen URL
+        window.onload = function() {
+            // Setze die Hintergrundfarbe auf Hellblau
+            document.bgColor = "lightblue";
+
+            // Überprüfe und zeige die vorherige URL an
+            checkReferrer();
+        };
+
+        // Funktion zum Aktualisieren der Seite
+        function reloadPage() {
+            // Lade die Seite erneut über die aktuelle URL
+            window.location.reload();
+        }
+    </script>
+</head>
+<body>
+<h1>Willkommen auf dieser Webseite</h1>
+<!-- Hier kommt der Inhalt Ihrer Webseite -->
+
+<!-- Button zum Aktualisieren der Seite -->
+<button onclick="reloadPage()">Seite aktualisieren</button>
+</body>
+</html>

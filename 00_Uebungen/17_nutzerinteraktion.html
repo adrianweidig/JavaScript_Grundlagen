@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mausklick Informationen</title>
+    <style>
+        /* Stil für den Info-Container */
+        #infoContainer {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<h1>Mausklick Informationen</h1>
+<div id="infoContainer">Klicken Sie irgendwo im Dokument.</div>
+
+<script>
+    // Funktion zur Auswertung der Mausklick-Informationen
+    function pos(event) {
+        // Informationen zum Mausklick aus dem Ereignisobjekt extrahieren
+        const xPosition = event.clientX; // X-Position des Mauszeigers im Fenster
+        const yPosition = event.clientY; // Y-Position des Mauszeigers im Fenster
+        const screenX = event.screenX; // X-Position des Mauszeigers auf dem Bildschirm
+        const screenY = event.screenY; // Y-Position des Mauszeigers auf dem Bildschirm
+        const target = event.target.tagName; // Das Element, auf das geklickt wurde
+
+        // Antworttext in den DIV-Container einfügen
+        document.getElementById('infoContainer').innerHTML = "<strong>Mausklick-Informationen:</strong><br>" +
+            "<strong>X-Position im Fenster:</strong> " + xPosition + "<br>" +
+            "<strong>Y-Position im Fenster:</strong> " + yPosition + "<br>" +
+            "<strong>X-Position auf dem Bildschirm:</strong> " + screenX + "<br>" +
+            "<strong>Y-Position auf dem Bildschirm:</strong> " + screenY + "<br>" +
+            "<strong>Element, auf das geklickt wurde:</strong> " + target;
+    }
+
+    // Eventhandler für das Loslassen der Maustaste (onmouseup)
+    document.onmouseup = pos;
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Java-Script Taschenrechner</title>
+    <style>
+        /* Stil für die Taschenrechner-Box */
+        #taschenrechnerBox {
+            border: 1px solid #999; /* Randstil */
+            border-radius: 5px; /* Abrundung der Ecken */
+            padding: 10px;
+            width: 280px; /* Breite der Taschenrechner-Box */
+            margin: 50px auto; /* Zentrierung der Box */
+            background-color: #f0f0f0; /* Hintergrundfarbe */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Schatten */
+        }
+
+        /* Stil für die Anzeige */
+        #anzeigeFeld {
+            width: calc(100% - 20px); /* Breite des Anzeigefelds */
+            height: 40px;
+            margin: 0 auto 10px;
+            font-size: 18px;
+            text-align: right; /* Textausrichtung rechts */
+            border: 1px solid #999; /* Randstil */
+            border-radius: 5px; /* Abrundung der Ecken */
+            padding: 5px;
+            background-color: #fff; /* Hintergrundfarbe des Anzeigefelds */
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Innen Schatten */
+            outline: none; /* Entfernt die Standard-Umrandung beim Fokus */
+        }
+
+        /* Stil für die Tasten */
+        .taste {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            font-size: 18px;
+            cursor: pointer; /* Zeiger beim Überfahren */
+            border: none; /* Entfernt die Standard-Randlinie */
+            border-radius: 5px; /* Abrundung der Ecken */
+            background-color: #d9d9d9; /* Hintergrundfarbe der Tasten */
+            box-shadow: 0 3px #999; /* Schatten */
+            transition: background-color 0.2s, box-shadow 0.2s; /* Übergangseffekte */
+        }
+
+        /* Effekte beim Überfahren der Tasten */
+        .taste:hover {
+            background-color: #ccc;
+            box-shadow: 0 2px #666;
+        }
+
+        /* Effekte beim Klicken der Tasten */
+        .taste:active {
+            background-color: #b3b3b3;
+            box-shadow: 0 1px #666;
+        }
+    </style>
+</head>
+<body>
+<!-- Taschenrechner-Box -->
+<div id="taschenrechnerBox">
+    <!-- Anzeigefeld -->
+    <input type="text" id="anzeigeFeld" readonly><br>
+
+    <!-- Tasten für den Taschenrechner -->
+    <button class="taste" id="taste7">7</button>
+    <button class="taste" id="taste8">8</button>
+    <button class="taste" id="taste9">9</button>
+    <button class="taste" id="tasteDiv">/</button>
+    <br>
+
+    <button class="taste" id="taste4">4</button>
+    <button class="taste" id="taste5">5</button>
+    <button class="taste" id="taste6">6</button>
+    <button class="taste" id="tasteMult">*</button>
+    <br>
+
+    <button class="taste" id="taste1">1</button>
+    <button class="taste" id="taste2">2</button>
+    <button class="taste" id="taste3">3</button>
+    <button class="taste" id="tasteSub">-</button>
+    <br>
+
+    <button class="taste" id="taste0">0</button>
+    <button class="taste" id="tasteDot">.</button>
+    <button class="taste" id="tasteEqual">=</button>
+    <button class="taste" id="tasteAdd">+</button>
+    <br>
+
+    <button class="taste" id="tasteClear">C</button> <!-- Löscht den Inhalt -->
+</div>
+
+<script>
+    // Eventlistener für die Tasten
+    function addClickListener(id, value) {
+        document.getElementById(id).addEventListener('click', function () {
+            eingabe(value);
+        });
+    }
+
+    // Funktion zur Eingabe von Zeichen in das Anzeigefeld
+    function eingabe(wert) {
+        document.getElementById('anzeigeFeld').value += wert;
+    }
+
+    // Funktion zum Löschen des Anzeigefelds
+    function loeschen() {
+        document.getElementById('anzeigeFeld').value = '';
+    }
+
+    // Funktion zur Berechnung des Ergebnisses
+    function berechnen() {
+        const eingabeFeld = document.getElementById('anzeigeFeld');
+        try {
+            const ergebnis = eval(eingabeFeld.value);
+            if (isNaN(ergebnis) || !isFinite(ergebnis)) {
+                throw new Error('Ungültiger Ausdruck');
+            }
+            eingabeFeld.value = ergebnis;
+        } catch (error) {
+            eingabeFeld.value = 'Fehler';
+        }
+    }
+
+    addClickListener('taste0', '0');
+    addClickListener('taste1', '1');
+    addClickListener('taste2', '2');
+    addClickListener('taste3', '3');
+    addClickListener('taste4', '4');
+    addClickListener('taste5', '5');
+    addClickListener('taste6', '6');
+    addClickListener('taste7', '7');
+    addClickListener('taste8', '8');
+    addClickListener('taste9', '9');
+
+    addClickListener('tasteDot', '.');
+    addClickListener('tasteAdd', '+');
+    addClickListener('tasteSub', '-');
+    addClickListener('tasteMult', '*');
+    addClickListener('tasteDiv', '/');
+
+    document.getElementById('tasteEqual').addEventListener('click', berechnen);
+    document.getElementById('tasteClear').addEventListener('click', loeschen);
+</script>
+</body>
+</html>

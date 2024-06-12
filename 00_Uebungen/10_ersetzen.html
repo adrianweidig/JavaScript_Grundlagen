@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Umlaut-Konvertierung</title>
+    <script type="text/javascript">
+        // Aufgabe 1: Funktion ohne reguläre Ausdrücke
+        function replaceUmlauts(str) {
+            str = str.replace(/ä/g, "ae"); // Ersetzt alle Vorkommen von "ä" mit "ae"
+            str = str.replace(/ö/g, "oe"); // Ersetzt alle Vorkommen von "ö" mit "oe"
+            str = str.replace(/ü/g, "ue"); // Ersetzt alle Vorkommen von "ü" mit "ue"
+            return str; // Gibt die konvertierte Zeichenkette zurück
+        }
+
+        // Aufgabe 2: Funktion mit regulären Ausdrücken
+        function replaceUmlautsRegex(str) {
+            return str.replace(/ä/g, "ae") // Ersetzt alle Vorkommen von "ä" mit "ae"
+                .replace(/ö/g, "oe") // Ersetzt alle Vorkommen von "ö" mit "oe"
+                .replace(/ü/g, "ue"); // Ersetzt alle Vorkommen von "ü" mit "ue"
+        }
+
+        // Test der Funktionen
+        document.write("<h2>Ergebnisse der Umlaut-Konvertierung</h2>");
+
+        // Weniger gebräuchlicher Teststring
+        let testString = "Gräfin Klößchen zählte fünfzig blühende Büsche.";
+
+        // Test der Funktion ohne reguläre Ausdrücke
+        document.write("<strong>Originaler String:</strong> " + testString + "<br>");
+        document.write("<strong>Ergebnis ohne RegEx:</strong> " + replaceUmlauts(testString) + "<br>");
+
+        // Test der Funktion mit regulären Ausdrücken
+        document.write("<strong>Ergebnis mit RegEx:</strong> " + replaceUmlautsRegex(testString) + "<br>");
+    </script>
+</head>
+<body>
+</body>
+</html>
