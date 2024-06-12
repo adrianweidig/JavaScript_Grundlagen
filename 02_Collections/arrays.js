@@ -8,7 +8,6 @@
 // Besonderheiten:
 // - Arrays und Listen sind geordnete Sammlungen, wobei die Reihenfolge der Elemente erhalten bleibt.
 
-
 // 1. Erstellung eines Arrays:
 //    - Verwende eckige Klammern, um ein Array zu erstellen.
 //    - Beispiel:
@@ -62,3 +61,44 @@ for (let i = 0; i < namen.length; i++) {
 namen.forEach(function (name) {
     console.log("Name:", name);
 });
+
+// 7. Suchen nach einem Element in einem Array:
+//    - Verwende die Methode "find()", um ein Element in einem Array basierend auf einer Bedingung zu finden.
+//    - Beispiel:
+
+const gefundenerName1 = namen.find(function (name) {
+    return name === "Bob";
+});
+console.log("Gefundener Name1:", gefundenerName1);
+
+// Arrow Variante
+
+const gefundenerName2 = namen.find(name => name === "Alice");
+console.log("Gefundener Name:", gefundenerName2);
+// Ausgabe: Gefundener Name: Bob
+
+// 8. Suchen nach dem Index eines Elements in einem Array mit findIndex():
+//    - Verwende die Methode "findIndex()", um den Index eines Elements in einem Array basierend auf einer Bedingung zu finden.
+//    - Beispiel:
+
+const indexVonBob = namen.findIndex(name => name === "Bob");
+console.log("Index von Bob:", indexVonBob);
+// Ausgabe: Index von Bob: 1
+
+// 9. Filtern von Elementen in einem Array mit filter():
+//    - Verwende die Methode "filter()", um Elemente in einem Array basierend auf einer Bedingung zu filtern.
+//    - Beispiel:
+
+const namenMitE = namen.filter(name => name.includes("e") || name.includes("E"));
+console.log("Namen mit 'e':", namenMitE);
+// Ausgabe: Namen mit 'e': [ 'Alice', 'Eva' ]
+
+// 10. Überprüfen, ob ein Element in einem Array vorhanden ist, mit includes():
+//     - Verwende die Methode "includes()", um zu überprüfen, ob ein Element in einem Array vorhanden ist.
+//     - Beispiel:
+
+const istDavidVorhanden = namen.includes("David");
+console.log("Ist David vorhanden?", istDavidVorhanden);
+// Ausgabe: Ist David vorhanden? true
+
+
