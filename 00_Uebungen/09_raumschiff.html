@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Raumschiff Beispiel</title>
+    <script type="text/javascript">
+        // Klasse für Raumschiff
+        class Raumschiff {
+            constructor(name) {
+                this.name = name; // Initialisiert den Namen des Raumschiffs
+                this.entfernung = 0; // Setzt die Anfangsentfernung des Raumschiffs auf 0
+            }
+
+            // Methode entfernen
+            entfernen(lichtjahre) {
+                if (this.entfernung === 0) { // Wenn das Raumschiff sich noch nicht entfernt hat
+                    document.write("Das Raumschiff ist von der Erde gestartet:<br>");
+                }
+                this.entfernung += lichtjahre; // Erhöht die Entfernung um die angegebenen Lichtjahre
+                document.write(this.name + " => Aktuelle Reise: " + lichtjahre + " Lichtjahre -> Erdentfernung: " + this.entfernung + " Lichtjahre<br>");
+            }
+
+            // Methode zurueck
+            zurueck(lichtjahre) {
+                if (this.entfernung > lichtjahre) { // Wenn die aktuelle Entfernung größer als die zurückgelegten Lichtjahre ist
+                    this.entfernung -= lichtjahre; // Verringert die Entfernung um die angegebenen Lichtjahre
+                    document.write(this.name + " kommt zurück zur Erde: nur noch " + this.entfernung + " Lichtjahre;<br>");
+                } else if (this.entfernung === lichtjahre) { // Wenn die Entfernung genau den zurückgelegten Lichtjahren entspricht
+                    this.entfernung -= lichtjahre; // Setzt die Entfernung auf 0
+                    document.write("Willkommen zu Hause auf der Erde, " + this.name + "!<br>");
+                } else { // Wenn die Entfernung weniger als die zurückgelegten Lichtjahre ist
+                    this.entfernung = 0; // Setzt die Entfernung auf 0
+                    document.write("<br>" + this.name + " ist bereits auf der Erde gelandet!<br>");
+                }
+            }
+        }
+
+        // Ausgabe einer einleitenden Nachricht
+        document.write("<h2>Und es bewegt sich doch</h2>");
+
+        // Erzeugen des Objekts enterprise
+        const enterprise = new Raumschiff("U.S.S. Enterprise");
+
+        // Methodenaufrufe für enterprise
+        enterprise.entfernen(50); // Entfernt das Raumschiff um 50 Lichtjahre
+        enterprise.entfernen(100); // Entfernt das Raumschiff um weitere 100 Lichtjahre
+        enterprise.zurueck(50); // Bringt das Raumschiff um 50 Lichtjahre zurück zur Erde
+        enterprise.zurueck(100); // Bringt das Raumschiff um weitere 100 Lichtjahre zurück zur Erde
+        enterprise.zurueck(50); // Bringt das Raumschiff um weitere 50 Lichtjahre zurück zur Erde, wenn es bereits auf der Erde ist
+
+        // Ausgabe aller Attribute des Objekts enterprise
+        document.write("<h2>Eigenschaften des Objekts Enterprise:</h2>");
+        for (const prop in enterprise) {
+            if (enterprise.hasOwnProperty(prop)) {
+                document.write(prop + ": " + enterprise[prop] + "<br>");
+            }
+        }
+
+        document.write("<br>")
+
+        // Erzeugen des Objekts voyager
+        const voyager = new Raumschiff("Voyager");
+
+        // Schleifenfunktion für voyager
+        for (let i = 0; i < 10; i++) {
+            voyager.entfernen(20); // Entfernt das Raumschiff um 20 Lichtjahre in jeder Iteration
+        }
+
+        // Ausgabe aller Attribute des Objekts voyager
+        document.write("<h2>Eigenschaften des Objekts Voyager:</h2>");
+        for (const prop in voyager) {
+            if (voyager.hasOwnProperty(prop)) {
+                document.write(prop + ": " + voyager[prop] + "<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

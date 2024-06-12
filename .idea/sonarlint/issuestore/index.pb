@@ -129,3 +129,5 @@ L
 ,00_Uebungen/08_lokale_globale_variablen.html,0\c\0cf45ce5052720d3129f982893eb05d2df44d0fd
 Q
 !node_modules/node.js/package.json,1\a\1addeb708f144d0aaa48d1c57e16ee94effcb1e6
+N
+00_Uebungen/09_raumschiff.html,0\2\02ebfa6e9548190b49bd643312f7e0298fe397da
