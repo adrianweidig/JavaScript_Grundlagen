@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalender-Picker</title>
+    <style>
+        /* Styling für den Kalender */
+        .calendar {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .dropdown {
+            margin-bottom: 10px;
+        }
+        .dropdown select {
+            padding: 5px;
+            font-size: 16px;
+        }
+        .calendar-header, .calendar-week {
+            display: flex;
+        }
+        .calendar-header div, .calendar-day {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 1px;
+        }
+        .calendar-day:hover {
+            background: #eee;
+        }
+        .calendar-day.selected {
+            background: #007bff;
+            color: #fff;
+        }
+        .calendar-week {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calendar">
+    <div class="dropdown">
+        <select id="monthSelect"></select> <!-- Dropdown-Menü für die Monat-Auswahl -->
+        <select id="yearSelect"></select>  <!-- Dropdown-Menü für die Jahres-Auswahl -->
+    </div>
+    <div class="calendar-header">
+        <!-- Wochentagsabkürzungen -->
+        <div>Mo</div>
+        <div>Di</div>
+        <div>Mi</div>
+        <div>Do</div>
+        <div>Fr</div>
+        <div>Sa</div>
+        <div>So</div>
+    </div>
+    <div class="calendar-weeks" id="calendarWeeks"></div> <!-- Container für die Kalenderwochen -->
+</div>
+<div>
+    <input type="text" id="selectedDate" readonly style="margin-top: 10px; padding: 5px; font-size: 16px;"> <!-- Eingabefeld zur Anzeige des ausgewählten Datums -->
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const monthSelect = document.getElementById('monthSelect'); // Referenz zum Monat-Auswahl-Dropdown
+        const yearSelect = document.getElementById('yearSelect');   // Referenz zum Jahres-Auswahl-Dropdown
+        const calendarWeeks = document.getElementById('calendarWeeks'); // Referenz zum Container für die Kalenderwochen
+        const selectedDateInput = document.getElementById('selectedDate'); // Referenz zum Eingabefeld für das Datum
+
+        const months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember']; // Monatsnamen
+        const currentYear = new Date().getFullYear(); // Aktuelles Jahr
+        const startYear = currentYear - 50; // Startjahr für Dropdown
+        const endYear = currentYear + 50;   // Endjahr für Dropdown
+
+        // Füllt das Monat-Dropdown mit den Monatsnamen
+        months.forEach((month, index) => {
+            const option = document.createElement('option'); // Erstellt ein neues <option>-Element
+            option.value = index; // Setzt den Wert auf den Monatsindex
+            option.text = month;  // Setzt den Text auf den Monatsnamen
+            monthSelect.appendChild(option); // Fügt die Option zum Dropdown hinzu
+        });
+
+        // Füllt das Jahr-Dropdown mit den Jahren im Bereich von startYear bis endYear
+        for (let year = startYear; year <= endYear; year++) {
+            const option = document.createElement('option'); // Erstellt ein neues <option>-Element
+            option.value = year; // Setzt den Wert auf das Jahr
+            option.text = year;  // Setzt den Text auf das Jahr
+            yearSelect.appendChild(option); // Fügt die Option zum Dropdown hinzu
+        }
+
+        // Setzt das aktuelle Monat und Jahr als Standardauswahl
+        monthSelect.value = new Date().getMonth();
+        yearSelect.value = currentYear;
+
+        // Funktion zur Generierung des Kalenders
+        function generateCalendar() {
+            const selectedMonth = parseInt(monthSelect.value, 10); // Gewählter Monat
+            const selectedYear = parseInt(yearSelect.value, 10);   // Gewähltes Jahr
+            calendarWeeks.innerHTML = ''; // Löscht den aktuellen Kalenderinhalt
+
+            const firstDayOfMonth = new Date(selectedYear, selectedMonth, 1).getDay(); // Erster Tag des Monats
+            const daysInMonth = new Date(selectedYear, selectedMonth + 1, 0).getDate(); // Anzahl der Tage im Monat
+
+            const offset = (firstDayOfMonth + 6) % 7;  // Anpassung, damit der Monat mit Montag beginnt
+
+            let currentWeek = document.createElement('div'); // Erstellt ein neues <div> für die Woche
+            currentWeek.classList.add('calendar-week'); // Fügt die Klasse 'calendar-week' hinzu
+
+            // Füllt die leeren Zellen für die Tage vor dem 1. Tag des Monats
+            for (let i = 0; i < offset; i++) {
+                const emptyCell = document.createElement('div'); // Erstellt ein neues <div> für die leere Zelle
+                emptyCell.classList.add('calendar-day'); // Fügt die Klasse 'calendar-day' hinzu
+                currentWeek.appendChild(emptyCell); // Fügt die leere Zelle zur Woche hinzu
+            }
+
+            // Füllt die Zellen für die Tage des Monats
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement('div'); // Erstellt ein neues <div> für den Tag
+                dayCell.classList.add('calendar-day'); // Fügt die Klasse 'calendar-day' hinzu
+                dayCell.textContent = day; // Setzt den Tag als Text
+                dayCell.addEventListener('click', function() {
+                    // Event-Listener für den Klick auf einen Tag
+                    const selected = document.querySelector('.calendar-day.selected'); // Sucht das aktuell ausgewählte Element
+                    if (selected) {
+                        selected.classList.remove('selected'); // Entfernt die Klasse 'selected' vom vorher ausgewählten Tag
+                    }
+                    dayCell.classList.add('selected'); // Fügt die Klasse 'selected' zum angeklickten Tag hinzu
+                    // Setzt das Datum im Format Tag.Monat.Jahr in das Eingabefeld
+                    selectedDateInput.value = `${dayCell.textContent}. ${months[selectedMonth]} ${selectedYear}`;
+                });
+                currentWeek.appendChild(dayCell); // Fügt die Tageszelle zur Woche hinzu
+
+                // Wenn die Woche voll ist oder der letzte Tag des Monats erreicht ist, fügt die Woche zum Kalender hinzu
+                if ((offset + day) % 7 === 0 || day === daysInMonth) {
+                    calendarWeeks.appendChild(currentWeek); // Fügt die Woche zum Kalender hinzu
+                    currentWeek = document.createElement('div'); // Erstellt eine neue Woche
+                    currentWeek.classList.add('calendar-week'); // Fügt die Klasse 'calendar-week' hinzu
+                }
+            }
+
+            // Fügt die letzte Woche hinzu, falls sie nicht vollständig ist
+            if (currentWeek.children.length > 0) {
+                calendarWeeks.appendChild(currentWeek); // Fügt die unvollständige Woche zum Kalender hinzu
+            }
+        }
+
+        // Event-Listener für die Änderung der Auswahl im Monat- oder Jahr-Dropdown
+        monthSelect.addEventListener('change', generateCalendar);
+        yearSelect.addEventListener('change', generateCalendar);
+
+        generateCalendar(); // Generiert den Kalender beim Laden der Seite
+    });
+</script>
+
+</body>
+</html>

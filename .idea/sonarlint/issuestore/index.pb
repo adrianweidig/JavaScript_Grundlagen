@@ -165,3 +165,7 @@ K
 00_Uebungen/21_cookies.html,d\8\d8b8a0036d0e186350ca279ba1536ccb21784a2d
 U
 %00_Uebungen/09_konto_alternative.html,4\3\43d792d4fe14b6d94cb7f23c9ea857b9aae1c31f
+V
+&05_Funktionen/Funktionsklassen/Date.js,d\4\d4494be4f32623555c2f0900a0654e4d314bb4ce
+X
+(05_Funktionen/Funktionsklassen/Date.html,0\5\054f73412713fa2b90c424e171a9f2fe8ed20cd7
