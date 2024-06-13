@@ -17,7 +17,6 @@ function readDirRecursive(dir, prefix = '') {
     items.forEach((item, index) => {
         const fullPath = path.join(dir, item);
         const isLastItem = index === items.length - 1;
-        const newPrefix = prefix + (isLastItem ? '    ' : '│   ');
 
         // Überspringen, wenn der Ordner oder die Datei ignoriert werden soll
         if (ignoreDirs.includes(item) && fs.statSync(fullPath).isDirectory()) return;

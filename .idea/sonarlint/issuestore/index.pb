@@ -198,3 +198,13 @@ X
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+I
+07_Ereignisse/bubbling.js,4\c\4c299fa8dbccf5dae1f6794dd0075daaf60d3f22
+K
+07_Ereignisse/delegation.js,0\d\0de934a1b63bc546f4c99265f7e144d2d24fa284
+K
+07_Ereignisse/handlers.html,e\4\e448f32cd23753a6baf004ae8e068d67aa2beacd
+M
+07_Ereignisse/grundlagen.html,c\e\ced3d433db32aa0da12416f3869617cbbac9f3fd
+I
+07_Ereignisse/handlers.js,e\c\ec18c5643febf11e60bbfdc36a0ed7900e2f7ba9
