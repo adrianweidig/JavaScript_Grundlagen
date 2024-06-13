@@ -1,4 +1,4 @@
-// error_handling.js: Fehlerbehandlung mit Promises, Promise-Fehlerketten.
+// Fehlerbehandlung mit Promises, Promise-Fehlerketten.
 
 // 1. Fehlerbehandlung mit Promises
 //    - Fehler in Promises können mit der .catch()-Methode oder dem .then()-Block für Ablehnungen behandelt werden.

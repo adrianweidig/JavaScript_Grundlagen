@@ -1,4 +1,4 @@
-// promisifizierung.js: Promisifizierung von Funktionen, Konvertieren von Callbacks in Promises.
+// Promisifizierung von Funktionen, Konvertieren von Callbacks in Promises.
 
 // 1. Promisifizierung von Funktionen
 //    - Promisifizierung ist der Prozess, eine Funktion zu erstellen, die ein Promise zurückgibt, anstatt einen Callback zu verwenden.

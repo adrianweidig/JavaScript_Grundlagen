@@ -1,4 +1,4 @@
-// parallel_execution.js: Parallele Ausführung von Promises mit Promise.all() und Promise.race().
+// Parallele Ausführung von Promises mit Promise.all() und Promise.race().
 
 // 1. Parallele Ausführung mit Promise.all()
 //    - Promise.all() akzeptiert ein Array von Promises und gibt ein Promise zurück, das erfüllt wird, wenn alle Promises im Array erfüllt werden, oder abgelehnt wird, wenn mindestens eines abgelehnt wird.

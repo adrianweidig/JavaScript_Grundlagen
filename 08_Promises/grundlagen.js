@@ -1,4 +1,4 @@
-// grundlagen.js: Grundlagen von Promises, Erstellen von Promises, Promise-Status.
+// Grundlagen von Promises, Erstellen von Promises, Promise-Status.
 
 // 1. Was sind Promises?
 //    - Promises repräsentieren den Abschluss einer asynchronen Operation und ihren daraus resultierenden Wert.
