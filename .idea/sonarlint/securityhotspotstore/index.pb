@@ -195,3 +195,6 @@ V
 &08_Promises/server_dateibaum/server.js,0\9\097a45fb2ba72f89e7adc4092ade2d12e012eb96
 X
 (08_Promises/server_dateibaum/client.html,7\4\7433aab6b7b6d5f6ab61cdc2fed2109afb10850b
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
