@@ -1,17 +1,31 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Event-Bubbling in Java</title>
-    <script defer src="event_bubbling.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Bubbling Beispiel</title>
+    <style>
+        /* CSS für die Darstellung der geklickten Elemente */
+        .clicked-info {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
 </head>
 <body>
+<h1>Event-Bubbling Beispiel</h1>
 
+Buttons klicken oder ggf. auch auf die entstehenden Textboxen, Titel etc.<br>
 
+<!-- Button 1 und Button 2 für Demonstration -->
 <button class="button_1_klasse" id="Button1">Button 1</button>
 <button class="button_2_klasse" id="Button2">Button 2</button>
 
+<!-- Hier wird ein Container div definiert, in dem die Informationen angezeigt werden -->
+<div id="output"></div>
 
+<script src="bubbling.js"></script>
 </body>
 </html>

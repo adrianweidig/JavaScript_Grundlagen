@@ -1,15 +1,31 @@
-// Event-Objekte in Java
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('myButton');
+    const clickInfoContainer = document.getElementById('clickInfoContainer');
 
-// 1. Was sind Event-Objekte?
-//    - Event-Objekte sind spezielle Objekte, die Informationen über ein aufgetretenes Java Event enthalten, wie z. B. den Typ des Events oder die beteiligten Elemente.
+    // Event-Listener für den Klick auf den Button registrieren
+    button.addEventListener('click', function (event) {
+        // Erstellen eines neuen div-Elements zur Anzeige der Informationen
+        const infoDiv = document.createElement('div');
+        infoDiv.classList.add('clicked-info');
 
-// Verwendungszweck: Event-Objekte ermöglichen es, detaillierte Informationen über ein Java Event abzurufen und basierend darauf geeignete Aktionen auszuführen.
+        // Anzeigen der Informationen im infoDiv
+        infoDiv.innerHTML = `
+            <strong>Event-Typ:</strong> ${event.type}<br>
+            <strong>Ziel-Element:</strong> ${event.target.tagName.toLowerCase()}<br>
+            <strong>Klassennamen des Ziel-Elements:</strong> ${event.target.className || 'Keine Klassen'}<br>
+            <strong>Klick-Koordinaten (X, Y):</strong> ${event.clientX}, ${event.clientY}
+        `;
 
-// Beispiel:
-// Ein Event-Objekt für einen Mausklick kann Informationen über die Position des Klicks und das betroffene Element enthalten.
+        // Einfügen des infoDiv in das clickInfoContainer
+        clickInfoContainer.appendChild(infoDiv);
+    });
 
-const button = document.getElementById('myButton');
-button.addEventListener('click', function (event) {
-    console.log(event.type); // Gibt den Typ des Events aus (z. B. "click")
-    console.log(event.target); // Gibt das Element zurück, auf das geklickt wurde
+    // Event-Listener für Klicks auf das Dokument registrieren (Delegation)
+    document.body.addEventListener('click', function (event) {
+        // Konsolenausgabe des Event-Typs
+        console.log('Event-Typ (Delegation):', event.type);
+
+        // Konsolenausgabe des Ziel-Elements (Element, auf das geklickt wurde)
+        console.log('Ziel-Element (Delegation):', event.target);
+    });
 });

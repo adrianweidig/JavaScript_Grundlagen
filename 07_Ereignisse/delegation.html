@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Event-Delegation in Java</title>
-    <script defer src="event_delegation.js"></script>
+    <title>Event-Delegation in JavaScript</title>
+    <style>
+        .clicked-info {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
 
+<h1>Event-Delegation in JavaScript</h1>
+
+<p>
+    Dieses Beispiel demonstriert die Verwendung von Event-Delegation in JavaScript. <br>
+    Dazu einfach die Listenelemente anklicken.
+</p>
+
 <ul id="myList">
-    <li>Element 1</li>
-    <li>Element 2</li>
-    <li>Element 3</li>
+    <li>Listenelement 1</li>
+    <li>Listenelement 2</li>
+    <li>Listenelement 3</li>
+    <li>Listenelement 4</li>
+    <li>Listenelement 5</li>
 </ul>
+
+<div id="clickInfoContainer">
+    <!-- Hier werden die Informationen nach einem Klick auf ein Listenelement angezeigt -->
+</div>
+
+<script defer src="delegation.js"></script>
 
 </body>
 </html>
