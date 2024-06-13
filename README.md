@@ -24,7 +24,7 @@ Dieses Repository enthält Übungen und Beispiele zu den Grundlagen der JavaScri
 - [07_Ereignisse](../../tree/master/07_Ereignisse/) - Ereignisbehandlung in JavaScript und Event Delegation
 - [08_Promises](../../tree/master/08_Promises/) - Promises für asynchrone Operationen
 - [09_DOM](../../tree/master/09_DOM/) - DOM-Manipulation und Eventhandling
-- [10_AJAX](../../tree/master/10_AJAX/) - AJAX und serverseitige Interaktionen
+- [10_AJAX](../../tree/master/10_AJAX/) - AJAX (Asynchronous JavaScript and XML)
 
 Die Struktur beinhaltet auch Unterordner für eigene Lerneinheiten, Kursmaterialien und Vorlagen, um das Lernen und die Entwicklung zu erleichtern.
 
