@@ -11,7 +11,9 @@ const app = express();
 const port = 3000;
 
 // Verwende das CORS-Middleware in der Express-Anwendung, um CORS für alle Routen zu aktivieren
-app.use(cors()); // Aktiviert CORS für alle Routen
+app.use(cors({
+    origin: /^http:\/\/localhost(:\d+)?/
+})); // Aktiviert CORS nur für Anfragen von URLs, die mit 'http://localhost' beginnen
 
 // Mock-Daten für die Endpunkte
 const data1 = { id: 1, name: 'Data 1' }; // Daten für Endpunkt 1
