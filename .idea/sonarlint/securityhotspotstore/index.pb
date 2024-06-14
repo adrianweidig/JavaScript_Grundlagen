@@ -61,30 +61,6 @@ _
 /06_Regulaere_Ausdruecke/regulaere_ausdruecke.js,5\b\5b168b55cbe8556ede6d0eab4fe8ff7a2bb79144
 J
 00_Uebungen/01_umsatz.html,b\4\b4b303f16dfb6baf411e5fd54802091b33e3360e
-Q
-!07_Ereignisse/event_grundlagen.js,e\3\e37d8a36aacc4e6752ee6558266b74c2a018f2a5
-O
-07_Ereignisse/event_handlers.js,4\f\4f89ccc9c8a123244f016fee292453da0086f93b
-O
-07_Ereignisse/event_listener.js,7\5\751566973f331f20647cb913b154f3c4a16949a9
-M
-07_Ereignisse/event_object.js,0\1\01ec902e799cce4c944b80e585503bf30b7cfd0a
-O
-07_Ereignisse/event_bubbling.js,b\e\be04804beee1e35038aaada53ec738ea3e4b337b
-Q
-!07_Ereignisse/event_delegation.js,8\c\8c4ff824fc303ba2b25b154025439381b6827c93
-Q
-!07_Ereignisse/event_bubbling.html,5\7\5767b9470e9176e7d78b6553e98223ba119af8f8
-S
-#07_Ereignisse/event_delegation.html,a\1\a19e4d3a8f625b96ecff564664a6afc3fea0d916
-S
-#07_Ereignisse/event_grundlagen.html,2\d\2dc3e3e1d54d98576691b6423e588c2ce54630e2
-Q
-!07_Ereignisse/event_handlers.html,6\2\6280dcc485a86d22a44adbbf1c241b78d44ae9ea
-Q
-!07_Ereignisse/event_listener.html,7\6\763cfc5f2917f4125d248062fb612841d99b7df7
-O
-07_Ereignisse/event_object.html,8\9\8948b09ddf22eb85baeddd772fc491bef4881428
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 7
@@ -189,12 +165,6 @@ B
 10_AJAX/fetch.js,9\f\9fdad3b382b6e607afda67008f79ead915e57fda
 A
 10_AJAX/data.json,0\b\0bbb851aa1d7cf72c1fe4872a9c8c0c1db3db9eb
->
-dateibaum.html,2\6\26fdaabe102c4d1ec04f8f6edcb2224d7b05cab1
-V
-&08_Promises/server_dateibaum/server.js,0\9\097a45fb2ba72f89e7adc4092ade2d12e012eb96
-X
-(08_Promises/server_dateibaum/client.html,7\4\7433aab6b7b6d5f6ab61cdc2fed2109afb10850b
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
@@ -204,14 +174,10 @@ K
 07_Ereignisse/delegation.js,0\d\0de934a1b63bc546f4c99265f7e144d2d24fa284
 K
 07_Ereignisse/handlers.html,e\4\e448f32cd23753a6baf004ae8e068d67aa2beacd
-M
-07_Ereignisse/grundlagen.html,c\e\ced3d433db32aa0da12416f3869617cbbac9f3fd
 I
 07_Ereignisse/handlers.js,e\c\ec18c5643febf11e60bbfdc36a0ed7900e2f7ba9
 I
 07_Ereignisse/listener.js,e\2\e2b5fa926d4333ab4ec602a83b5c42372095444b
-K
-07_Ereignisse/grundlagen.js,1\d\1ddcc24413ff6a983b6132d4a5b9585b0b2ad8cd
 K
 07_Ereignisse/bubbling.html,3\b\3bf31722bae3fec197499cf45f176c528d5ee69b
 M
@@ -222,3 +188,11 @@ I
 07_Ereignisse/object.html,a\7\a73e184065ef4537d451dd014419a8269aca56f8
 G
 07_Ereignisse/object.js,0\a\0af202af4508437aa797c3fdf93b90059d9660cf
+L
+09_DOM/css_manipulation.html,5\c\5c69c2efa889cf3ad8c68a57f25dc98313b6cd0a
+B
+09_DOM/events.html,3\3\335e79d7f02c629d75ddc34887b35d528ada2966
+H
+09_DOM/manipulation.html,4\f\4f2f1a23f177d23fa98ad6cf3cb7d9fa55041225
+E
+09_DOM/traversal.html,d\5\d5834ed561de97ec24e4c8b499c6c7c1e99b7af4

@@ -1,17 +1,25 @@
-// Durch den DOM navigieren
+// Durch den DOM navigieren und Ausgabe in HTML
 
 // Funktion zum Navigieren durch den DOM
 function traverseDOM() {
+    let output = document.getElementById('output');
+
     let listItems = document.querySelectorAll('#list li');
     listItems.forEach(function(item, index) {
-        console.log('Listenelement ' + (index + 1) + ': ' + item.textContent);
+        let p = document.createElement('p');
+        p.textContent = 'Listenelement ' + (index + 1) + ': ' + item.textContent;
+        output.appendChild(p);
     });
 
     let firstListItem = document.querySelector('#list li:first-child');
-    console.log('Erstes Listenelement: ' + firstListItem.textContent);
+    let firstP = document.createElement('p');
+    firstP.textContent = 'Erstes Listenelement: ' + firstListItem.textContent;
+    output.appendChild(firstP);
 
     let parentElement = firstListItem.parentElement;
-    console.log('Eltern-Element des ersten Listenelements: ' + parentElement.tagName);
+    let parentP = document.createElement('p');
+    parentP.textContent = 'Eltern-Element des ersten Listenelements: ' + parentElement.tagName;
+    output.appendChild(parentP);
 }
 
 // Event Listener für Ausführung beim Laden der Seite
