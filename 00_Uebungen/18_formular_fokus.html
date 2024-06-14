@@ -14,7 +14,7 @@
 </head>
 <body>
 <h1>Formularüberprüfung</h1>
-<form id="meinFormular" onsubmit="return ueberpruefen()">
+<form id="meinFormular" onsubmit="return ueberpruefen(event)">
     <!-- Eingabefelder für Name, Vorname, Ort und Postleitzahl -->
     <label for="name">Name*:</label>
     <input type="text" id="name" name="name" required><br>
@@ -47,9 +47,10 @@
 
 <script>
     // Funktion zur Überprüfung des Formulars
-    function ueberpruefen() {
+    function ueberpruefen(event) {
         // Fehlermeldung zurücksetzen
-        document.getElementById('fehler').innerHTML = '';
+        const fehlerBereich = document.getElementById('fehler');
+        fehlerBereich.innerHTML = '';
 
         // Pflichtfelder überprüfen
         const name = document.getElementById('name').value;
@@ -57,10 +58,13 @@
         const ort = document.getElementById('ort').value;
         const plz = document.getElementById('plz').value;
 
+        let isValid = true;
+
+        // Kann man sich sparen wenn man required Tag nutzt
         if (!name || !vorname || !ort || !plz) {
             // Fehlermeldung anzeigen, wenn Pflichtfelder nicht ausgefüllt sind
-            document.getElementById('fehler').innerHTML = 'Bitte füllen Sie alle Pflichtfelder aus.';
-            return false; // Formular wird nicht abgesendet
+            fehlerBereich.innerHTML = 'Bitte füllen Sie alle Pflichtfelder aus.';
+            isValid = false;
         }
 
         // Zusätzliche Überprüfungen für Größe, Gewicht und Alter
@@ -70,12 +74,12 @@
 
         if (groesse < 0 || groesse > 300 || gewicht < 0 || alter < 0) {
             // Fehlermeldung anzeigen, wenn sinnvolle Werte nicht eingegeben wurden
-            document.getElementById('fehler').innerHTML = 'Bitte geben Sie gültige Werte für Größe, Gewicht und Alter ein.';
-            return false; // Formular wird nicht abgesendet
+            fehlerBereich.innerHTML = 'Bitte geben Sie gültige Werte für Größe, Gewicht und Alter ein.';
+            isValid = false;
         }
 
-        // Rückgabe true, wenn alle Überprüfungen erfolgreich waren
-        return true;
+        // Rückgabe des Validierungszustands
+        return isValid;
     }
 </script>
 </body>

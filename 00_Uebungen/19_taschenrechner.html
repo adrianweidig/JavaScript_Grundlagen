@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Java-Script Taschenrechner</title>
+    <title>JavaScript Taschenrechner</title>
     <style>
         /* Stil für die Taschenrechner-Box */
         #taschenrechnerBox {
@@ -92,10 +92,10 @@
 </div>
 
 <script>
-    // Eventlistener für die Tasten
-    function addClickListener(id, value) {
+    // Eventlistener für die Tasten mit zusätzlichem Funktionsparameter
+    function addClickListener(id, value, func) {
         document.getElementById(id).addEventListener('click', function () {
-            eingabe(value);
+            func(value); // Funktion mit dem übergebenen Wert aufrufen
         });
     }
 
@@ -123,29 +123,30 @@
             }
             eingabeFeld.value = ergebnis;
         } catch (error) {
-            eingabeFeld.value = 'Fehler';
+            eingabeFeld.value = error.message;
         }
     }
 
-    addClickListener('taste0', '0');
-    addClickListener('taste1', '1');
-    addClickListener('taste2', '2');
-    addClickListener('taste3', '3');
-    addClickListener('taste4', '4');
-    addClickListener('taste5', '5');
-    addClickListener('taste6', '6');
-    addClickListener('taste7', '7');
-    addClickListener('taste8', '8');
-    addClickListener('taste9', '9');
+    // Tasten mit entsprechenden Funktionen verknüpfen
+    addClickListener('taste0', '0', eingabe);
+    addClickListener('taste1', '1', eingabe);
+    addClickListener('taste2', '2', eingabe);
+    addClickListener('taste3', '3', eingabe);
+    addClickListener('taste4', '4', eingabe);
+    addClickListener('taste5', '5', eingabe);
+    addClickListener('taste6', '6', eingabe);
+    addClickListener('taste7', '7', eingabe);
+    addClickListener('taste8', '8', eingabe);
+    addClickListener('taste9', '9', eingabe);
 
-    addClickListener('tasteDot', '.');
-    addClickListener('tasteAdd', '+');
-    addClickListener('tasteSub', '-');
-    addClickListener('tasteMult', '*');
-    addClickListener('tasteDiv', '/');
+    addClickListener('tasteDot', '.', eingabe);
+    addClickListener('tasteAdd', '+', eingabe);
+    addClickListener('tasteSub', '-', eingabe);
+    addClickListener('tasteMult', '*', eingabe);
+    addClickListener('tasteDiv', '/', eingabe);
 
-    document.getElementById('tasteEqual').addEventListener('click', berechnen);
-    document.getElementById('tasteClear').addEventListener('click', loeschen);
+    addClickListener('tasteEqual', '=', berechnen);
+    addClickListener('tasteClear', 'C', loeschen);
 </script>
 </body>
 </html>
