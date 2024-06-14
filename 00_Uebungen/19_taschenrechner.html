@@ -113,6 +113,10 @@
     function berechnen() {
         const eingabeFeld = document.getElementById('anzeigeFeld');
         try {
+            // Die eval-Funktion wird verwendet, um den Inhalt des Anzeigefelds als JavaScript-Code auszuführen.
+            // Sie nimmt den aktuellen Wert des Anzeigefelds, der als String vorliegt, und interpretiert
+            // diesen als JavaScript-Ausdruck. Das Ergebnis dieser Auswertung wird dann verwendet, um das
+            // Anzeigefeld zu aktualisieren.
             const ergebnis = eval(eingabeFeld.value);
             if (isNaN(ergebnis) || !isFinite(ergebnis)) {
                 throw new Error('Ungültiger Ausdruck');
